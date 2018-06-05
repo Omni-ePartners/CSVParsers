@@ -2,7 +2,9 @@
 
 This script will parse a CSV file format collected from the ARA portal on the following filter:
 
-// TODO: figure out filter
+``Sales View: Shipped COGS, Distributor View: Sourcing, Category: All, Subcategory: All, Brand: Selected Brand, Reporting Range: Monthly ``
+
+which will produce two file outputs, Summary and Detail View.
 
 ## File format
 

@@ -2,7 +2,7 @@
 
 This script will parse a CSV file format collected from the ARA - Product Catalog on the following filter:
 
-// TODO: figure out filter
+``Distributor View: Manufacturing, Brand: Selected Brand``
 
 ## File format
 
