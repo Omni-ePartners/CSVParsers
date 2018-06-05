@@ -6,7 +6,7 @@ This script will parse a CSV file format collected from the Vendor Central - Ope
 
 No specific naming convention required but the script expects the CSV to contain the columns:
 
-``NO CARTON CONTENT LABEL", "NO CARTON CONTENT LABEL Amount", "PO ON-TIME ACCURACY", "PO ON-TIME ACCURACY Amount", "ASN ACCURACY", "ASN ACCURACY Amount", "Brand", "Portal", "Region", "Date Updated"``
+``NO CARTON CONTENT LABEL, NO CARTON CONTENT LABEL Amount, PO ON-TIME ACCURACY, PO ON-TIME ACCURACY Amount, ASN ACCURACY, ASN ACCURACY Amount, Brand, Portal, Region, Date Updated``
 
 in any order, the script will then re-arrange the CSV into this order above, to modify you will need to change the columns in the script to match your expected output.
 
