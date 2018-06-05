@@ -9,9 +9,9 @@ This script will parse a CSV file format collected from the Vendor Central - Pur
 The naming convention required will be ``BrandName_PurchaseOrders.csv`` the script will parse the brand name from the file name you specify and
 place that in a new column called ``brand`` and remove all columns from the CSV except the format as below:
 
-``Brand, ASIN, Submitted Cases, Accepted Cases, Received Cases``
+```Brand, ASIN, Submitted Cases, Accepted Cases, Received Cases```
 
 
 ## Output
 
-Parsed files will be in the chosen directory ``C:\path\to\csv\folder`` and will maintain the same name with a ``-2`` appended to the end of the file name.
+Parsed files will be in the chosen directory ```C:\path\to\csv\folder``` and will maintain the same name with a ``-2`` appended to the end of the file name.

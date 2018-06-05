@@ -12,6 +12,6 @@ The naming convention required will be ``BrandName_Region_PurchaseOrders.csv`` o
 
 Output Format:
 
-``PO, Vendor, Ordered On, Ship to location, Ship window start, Ship window end, Total Cases, Total Cost, BRAND, Portal, Region, Date Updated, Currency Type ``
+```PO, Vendor, Ordered On, Ship to location, Ship window start, Ship window end, Total Cases, Total Cost, BRAND, Portal, Region, Date Updated, Currency Type ```
 
 Parsed files will be in the chosen directory ``C:\path\to\csv\folder`` and will maintain the same name with a ``-2`` appended to the end of the file name.

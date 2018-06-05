@@ -2,7 +2,7 @@
 
 This script will parse a CSV file format collected from the ARA - Product Catalog on the following filter:
 
-``Distributor View: Manufacturing, Brand: Selected Brand``
+```Distributor View: Manufacturing, Brand: Selected Brand```
 
 ## File format
 
@@ -14,6 +14,6 @@ place that in a new column called ``Brand Name`` appended to the end of the CSV 
 
 File Format:
 
-``ASIN, Product Title, Parent ASIN, ISBN-13, EAN, UPC, Release Date, List Price, Binding, Author / Artist, SITB enabled?, Apparel Size, Apparel Size Width, Product Group,  Replenishment Code, Replenishment Category, Model / Style Number, Color, Color Count, Brand Code, Brand, Publisher, Brand Name ``
+```ASIN, Product Title, Parent ASIN, ISBN-13, EAN, UPC, Release Date, List Price, Binding, Author / Artist, SITB enabled?, Apparel Size, Apparel Size Width, Product Group,  Replenishment Code, Replenishment Category, Model / Style Number, Color, Color Count, Brand Code, Brand, Publisher, Brand Name ```
 
 Parsed files will be in the chosen directory ``C:\path\to\csv\folder`` and will maintain the same name with a ``-2`` appended to the end of the file name.

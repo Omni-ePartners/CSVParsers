@@ -2,7 +2,7 @@
 
 This script will parse a CSV file format collected from the ARA portal on the following filter:
 
-``Sales View: Shipped COGS, Distributor View: Sourcing, Category: All, Subcategory: All, Brand: Selected Brand, Reporting Range: Monthly ``
+```Sales View: Shipped COGS, Distributor View: Sourcing, Category: All, Subcategory: All, Brand: Selected Brand, Reporting Range: Monthly ```
 
 which will produce two file outputs, Summary and Detail View.
 
@@ -16,6 +16,6 @@ place that in a new column called ``Brand`` appended to the end of the CSV heade
 
 File Format:
 
-``ASIN, Product Title, Shipped COGS, Shipped COGS - %, Shipped COGS - Prior Period, Shipped COGS - Last Year, Shipped Units, Shipped Units - % of Total, Shipped Units - Prior Period, Shipped Units - Prior Period, Shipped Units - Last Year, Customer Returns, Free Replacements, Brand ``
+```ASIN, Product Title, Shipped COGS, Shipped COGS - %, Shipped COGS - Prior Period, Shipped COGS - Last Year, Shipped Units, Shipped Units - % of Total, Shipped Units - Prior Period, Shipped Units - Prior Period, Shipped Units - Last Year, Customer Returns, Free Replacements, Brand ```
 
 Parsed files will be in the chosen directory ``C:\path\to\csv\folder`` and will maintain the same name with a ``-1-2`` appended to the end of the file name.
