@@ -1,8 +1,19 @@
-Get-ChildItem -Path 'C:\path\to\csv\folder' -Filter '*.csv' | ForEach-Object {
-    Get-Content $_ | Select -Skip 1 | Out-File "$($_.Directory)\$($_.BaseName)-1.csv" -Encoding UTF8
+Get-ChildItem -Path 'C:\path\to\csv' -Filter '*.csv' | ForEach-Object {
+    Get-Content $_ | Select -Skip 1 | Out-File "$($_.Directory)\$($_.BaseName)_1.csv" -Encoding UTF8
 }
-Get-ChildItem -Path 'C:\path\to\csv\folder' -Filter '*-1.csv' | ForEach-Object {
-  $brandName = $_.BaseName.split('_', 2)[0]
-  Import-Csv $_ | Select-Object *,@{Name='Brand Name';Expression={"$brandName"}}  | Export-Csv "$($_.Directory)\$($_.BaseName)-2.csv" -Encoding UTF8 -NoTypeInformation
+Get-ChildItem -Path 'C:\path\to\csv' -Filter '*_1.csv' | ForEach-Object {
+  $brandName = $_.BaseName.split('_', 4)[0]
+  $region = $_.BaseName.split('_', 4)[2]
+  $date = (Get-Date).ToString().split(' ', 2)[0]
+  if($region -match "US") {
+    $currency = "USD"
+  } else {
+    $currency = "CAD"
+  }
+
+  Import-Csv $_ |
+  Select-Object *,@{Name='Brand Name';Expression={"$brandName"}},@{Name='Region';Expression={"$region"}},@{Name='Date_Updated';Expression={"$date"}},@{Name='Currency_Type';Expression={"$currency"}}  |
+  Export-Csv "$($_.Directory)\$($_.BaseName)_2.csv" -Encoding UTF8 -NoTypeInformation
 }
+Get-ChildItem -Path 'C:\path\to\csv' -Filter *_1_2.csv | Select-Object -ExpandProperty FullName | Import-Csv | Export-Csv Product_Catalog_Merged.csv -NoTypeInformation -Append -Encoding UTF8
 
